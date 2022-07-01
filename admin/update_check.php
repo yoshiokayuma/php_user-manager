@@ -24,7 +24,7 @@ if (!preg_match('|^[0-9a-z_./?-]+@([0-9a-z-]+\.)+[0-9a-z-]+$|', $mail_address)) 
     $errors['mail_address'][] = "Mail Addressのフォーマットが不正です。";
 }
 
-$auther->login_chk(true);
+$auther->login_chk();
 
 ?>
 <!doctype html>

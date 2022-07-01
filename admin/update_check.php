@@ -56,7 +56,7 @@ $auther->login_chk();
             <?php } ?>
         </div>
 
-        <form method="POST" action="./check.php">
+        <form method="POST" action="./update_check.php">
         <input type="hidden" name="users_id" value="<?php echo $users_id; ?> ">
                 <div class="mb-3">
             <label for="users_name" class="form-label">user_name</label>
@@ -91,7 +91,7 @@ $auther->login_chk();
         </form>  
 
 
-        <form method="POST" action="./inpot.php">
+        <form method="POST" action="./update.php">
         <input type="hidden" name="users_id" value="<?php echo $users_id; ?> ">
         <input type="hidden" class="form-control" readonly id="name" name="user_name" aria-describedy="emailHelp" value="<?php echo $user_name; ?>">
         <input type="hidden" class="form-control" readonly  id="mail" name="mail_address"aria-describedy="emailHelp" value ="<?php echo $mail_address; ?>">

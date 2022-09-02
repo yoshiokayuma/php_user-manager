@@ -71,24 +71,23 @@ if(empty($district)) {
    {
          //ユーザー更新
      if(!empty($pass_word)) {
-     $query = "UPDATE users SET  users_name = ? , mail_address = ?, upate_dt = ? , pass_word = ? WHERE users_id = ?";
-     $stmt = mysqli_prepare($this->db_link, $query);
-     //パスワードを不可逆変換する
-     $cry_pass_word = md5($pass_word);
-     //現在日付を取得
-     $now_dt = date("Y-m-d H:i:s");
-     
-     mysqli_stmt_bind_param($stmt, 'ssssd', $users_name , $mail_address , $cry_pass_word , $now_dt , $now_dt);
-     mysqli_stmt_execute($stmt);
-         }
-     else{
-         $query = "UPDATE users SET  users_name = ? , mail_address = ?, upate_dt = ? , pass_word = ? WHERE users_id = ?";
-         $stmt = mysqli_prepare($this->db_link, $query);
-         //現在日付を取得
-     $now_dt = date("Y-m-d H:i:s");
-     mysqli_stmt_bind_param($stmt, 'ssssd', $users_name , $mail_address , $cry_pass_word , $now_dt , $now_dt);
-     mysqli_stmt_execute($stmt);
-              
+        $query = "UPDATE users SET  users_name = ? , mail_address = ?, upate_dt = ? , pass_word = ? WHERE users_id = ?";
+        $stmt = mysqli_prepare($this->db_link, $query);
+        //パスワードを不可逆変換する
+        $cry_pass_word = md5($pass_word);
+        //現在日付を取得
+        $now_dt = date("Y-m-d H:i:s");
+
+        mysqli_stmt_bind_param($stmt, 'ssssd', $users_name , $mail_address , $cry_pass_word , $now_dt , $now_dt);
+        mysqli_stmt_execute($stmt);
+    }
+    else{
+        $query = "UPDATE users SET  users_name = ? , mail_address = ?, upate_dt = ? WHERE users_id = ?";
+        $stmt = mysqli_prepare($this->db_link, $query);
+        //現在日付を取得
+        $now_dt = date("Y-m-d H:i:s");
+        mysqli_stmt_bind_param($stmt, 'sssd', $users_name , $mail_address  , $upate_dt , $users_id);
+        mysqli_stmt_execute($stmt);
    }
 }
 

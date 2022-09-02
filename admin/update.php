@@ -45,7 +45,7 @@ $auther->login_chk();
             <label for="pass_word" class="form-label">password</label>
             <input type="pass_word" class="form-control" id="xampleInputPassword" name="pass_word"iaria-describedy="emalHelp" value ="<?php echo $pass_word; ?>">
         </div>
-        <button type="submit" class="btn btn-primary">sgin in</button>
+        <button type="submit" class="btn btn-primary">登録</button>
         </form>  
 
 

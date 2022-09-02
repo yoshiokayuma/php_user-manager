@@ -40,7 +40,7 @@ $auther->login_chk();
             <label for="pass_word" class="form-label">password</label>
             <input type="password" class="form-control" readonly id="xampleInputPassword" name="pass_word" value ="<?php echo str_repeat("・" ,6); ?>">
         </div>
-        <button type="submit" class="btn btn-primary">登録</button>
+        <button type="submit" class="btn btn-primary">消去</button>
         </form> 
         <a href="./detail.php?users_id=<?php echo $users_id; ?>">Back </a>
 
